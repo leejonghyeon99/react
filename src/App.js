@@ -1,25 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 
+// JSX (JavaScript XML) 문법
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-         안녕하세요, 지각 안하겠습니다!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <div>hi</div>;
 }
 
 export default App;
