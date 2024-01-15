@@ -16,11 +16,21 @@ import App081 from './08/App081'; //useMemo
 import App091 from './09/App091'; //useRefs
 import App101 from './10/App101';
 import MyStudy from './my/MyStudy';
+import App102 from './10/App102'; //styled-component로 style 적용하는 방법 
+import App103 from './10/App103'; //props 외 
+import App141 from './14/App141'; //react-router-dom
+import App151 from './15/App151'; //간단 게시판, 자식이 다른 자식의 데이터 조작은 불가
+import App152 from './152/App152';
+
+import {BrowserRouter} from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <MyStudy/>
+    <BrowserRouter>
+      <App152/>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
