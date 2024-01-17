@@ -30,19 +30,26 @@ const ListPage = () => {
     //id, title, content을 가져와야 함.
      //useRef 를 사용해도 되나... input에 넣으면 불편함
      //<input>에 '상태'를 주어 사용하는 것이다.
-    post.id ? handleUpdate() : alert("아이디 없다")
-     
+    !post.id ? alert("아이디 없다") : posts.filter(p => p.id == post.id).length ? handleUpdate() : setPosts([...posts, post]);
+    sort();
 
   };
 
    //삭제
    const handleDelete = (e) => {
-    setPosts(posts.filter(p => p.id !== e))
+    setPosts(posts.filter(p => p.id != e))
    }
 
   //수정
   const handleUpdate = () => {
-    posts.filter(p => p.id == post.id).length ? alert('중복ID') : setPosts([...posts, post]);
+    let newPost = {...post};
+    newPost.id = Number.parseInt(newPost.id);
+    setPosts(posts.map(m => m.id == post.id ? newPost : m))
+  }
+
+  //정렬
+  const sort = () => {
+    setPosts([...posts].sort((a,b) => a.id - b.id));
   }
 
   // onXXX() 콜백함수(event handler)의 매개변수는 event객체다.
@@ -90,6 +97,7 @@ const ListPage = () => {
          >
           글쓰기
         </button>
+        {/* <button type='button' onClick={sort}>정렬</button> */}
       </form>
       <hr />
       {posts.map((post) => (

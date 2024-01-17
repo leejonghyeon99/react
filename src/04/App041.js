@@ -1,7 +1,7 @@
 import React from 'react';
 import Beta from './Beta';
 
-const App041 = () => {
+const   App041 = () => {
     // return (
     //     <>
     //      <div>A</div>   

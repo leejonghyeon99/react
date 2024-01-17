@@ -2,6 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+
+// import 'bootstrap/dist/css/bootstrap.min.css';
+
 import App from './App';
 import App02 from './02/App02'; //chp02 리액트 구조
 import App021 from './02/App021';
@@ -24,14 +27,18 @@ import App152 from './152/App152';
 
 import {BrowserRouter} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import RBoardApp from './r-board-client/RBoardApp';
+
+// import App181 from './181/App181';
+// import App182 from './182/App182';
+// import BookApp from './book-frontend/BookApp';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
     <BrowserRouter>
-      <App152/>
+      <RBoardApp/>
     </BrowserRouter>
-  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

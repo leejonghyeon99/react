@@ -1,14 +1,18 @@
 import React, { useState } from 'react';
 import './my.css';
 
+function Hello(){
+    return (
+        <h1>함수형 컴포넌트!</h1>
+    );
+}
+
 const MyStudy = () => {
 
     
 
     return (
-        <>
-            <div className='test'>Hello</div>                
-        </>
+        <Hello/>
     );
 };
 
