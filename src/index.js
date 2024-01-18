@@ -27,7 +27,8 @@ import App152 from './152/App152';
 
 import {BrowserRouter} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import RBoardApp from './r-board-client/RBoardApp';
+// import RBoardApp from './r-board-client/RBoardApp';
+import RSurveyApp from './r-survey-client/RSurveyApp';
 
 // import App181 from './181/App181';
 // import App182 from './182/App182';
@@ -37,7 +38,7 @@ import RBoardApp from './r-board-client/RBoardApp';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <BrowserRouter>
-      <RBoardApp/>
+      <RSurveyApp/>
     </BrowserRouter>
 );
 
